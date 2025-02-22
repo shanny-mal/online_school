@@ -1,0 +1,70 @@
+/* src/styles/EditCourse.css */
+.edit-course-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f7f9fc;
+  min-height: calc(100vh - 100px);
+}
+
+.edit-course-container h2 {
+  color: #1a237e;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.edit-course-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+}
+
+.edit-course-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.edit-course-form .form-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.edit-course-form .form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-course-form .form-control:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.25);
+  outline: none;
+}
+
+.edit-course-form .btn {
+  background: linear-gradient(135deg, #3f51b5, #1a237e);
+  border: none;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.edit-course-form .btn:hover {
+  background: linear-gradient(135deg, #303f9f, #0d47a1);
+}

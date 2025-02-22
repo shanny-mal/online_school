@@ -1,0 +1,73 @@
+/* src/styles/Contact.css */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.contact-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1a237e;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #333;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 0.2rem rgba(63, 81, 181, 0.25);
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, #3f51b5, #1a237e);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #303f9f, #0d47a1);
+}
