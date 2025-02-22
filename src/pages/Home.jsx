@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home">
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Welcome to ShannyTechSolutions Learning Platform</h1>
+          <h1>Welcome to ShannyTechSolution Learning Platform</h1>
           <p>Your journey to knowledge starts here.</p>
           <div className="hero-btn-group">
             <Link to="/login" className="btn hero-btn">
