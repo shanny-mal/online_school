@@ -7,9 +7,9 @@
 }
 
 .dashboard-sidebar {
-  width: 220px;
-  background: #fff;
-  border: 1px solid #e0e0e0;
+  width: 240px;
+  background: linear-gradient(135deg, #3f51b5, #1a237e); /* Same as navbar */
+  color: #fff;
   border-radius: 8px;
   padding: 1rem;
   margin-right: 2rem;
@@ -29,12 +29,12 @@
   margin-bottom: 0.5rem;
   transition: background 0.3s ease;
   font-size: 1.1rem;
-  color: #333;
+  color: #fff;
 }
 
 .dashboard-sidebar li:hover,
 .dashboard-sidebar li.active {
-  background-color: #e3f2fd;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .dashboard-content {
@@ -52,7 +52,16 @@
   text-align: center;
 }
 
-/* Upload grid styles */
+.dashboard-section {
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
 .dashboard-upload-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -76,4 +85,13 @@
   margin-bottom: 1rem;
   font-size: 1.3rem;
   color: #1a237e;
+}
+
+/* Optional: Style for the profile avatar in the sidebar (if desired) */
+.dashboard-sidebar .profile-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
 }

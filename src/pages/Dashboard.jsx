@@ -3,13 +3,15 @@ import React, { useState, useEffect } from "react";
 import API from "../services/api";
 import CourseCard from "../components/CourseCard";
 import FileUpload from "../components/FileUpload";
-import "../styles/Dashboard.css"; // Your custom Dashboard styles
+import { useAuth } from "../context/AuthContext";
+import "../styles/Dashboard.css"; // Custom Dashboard styles
 
 const Dashboard = () => {
-  // State to track which dashboard section is active
+  // State to track the active section
   const [activeSection, setActiveSection] = useState("home");
   const [courses, setCourses] = useState([]);
   const [coursesLoading, setCoursesLoading] = useState(false);
+  const { user } = useAuth();
 
   // Function to fetch courses
   const fetchCourses = async () => {
@@ -24,7 +26,7 @@ const Dashboard = () => {
     }
   };
 
-  // When activeSection becomes "myCourses" or "manageCourses", fetch courses
+  // Fetch courses when active section is either myCourses or manageCourses
   useEffect(() => {
     if (activeSection === "myCourses" || activeSection === "manageCourses") {
       fetchCourses();
@@ -38,9 +40,31 @@ const Dashboard = () => {
           <div className="dashboard-home">
             <h2>User Dashboard</h2>
             <p className="dashboard-lead">
-              Welcome to your dashboard. Use the sidebar to navigate between
-              sections.
+              Welcome{user ? `, ${user.first_name}` : ""}. Use the sidebar to
+              navigate between sections.
             </p>
+          </div>
+        );
+      case "profile":
+        return (
+          <div className="dashboard-section">
+            <h2>My Profile</h2>
+            <div className="profile-details">
+              <img
+                src={user.profile_picture || "/assets/default-profile.png"}
+                alt="Profile"
+                className="profile-avatar-large"
+              />
+              <p>
+                <strong>Email:</strong> {user.email}
+              </p>
+              <p>
+                <strong>First Name:</strong> {user.first_name}
+              </p>
+              <p>
+                <strong>Last Name:</strong> {user.last_name}
+              </p>
+            </div>
           </div>
         );
       case "myCourses":
@@ -115,6 +139,12 @@ const Dashboard = () => {
             onClick={() => setActiveSection("home")}
           >
             Home
+          </li>
+          <li
+            className={activeSection === "profile" ? "active" : ""}
+            onClick={() => setActiveSection("profile")}
+          >
+            Profile
           </li>
           <li
             className={activeSection === "myCourses" ? "active" : ""}
