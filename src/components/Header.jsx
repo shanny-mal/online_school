@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
@@ -13,11 +12,11 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg custom-navbar">
+    <nav className="navbar custom-navbar">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src="/logo.png" alt="Logo" className="logo" />
-          ShannyTechSolutions
+          <span className="brand-text">ShannyTechSolutions</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -43,7 +42,9 @@ const Header = () => {
                       alt="Profile"
                       className="profile-pic"
                     />
-                    {user.first_name} {user.last_name}
+                    <span className="user-name">
+                      {user.first_name} {user.last_name}
+                    </span>
                   </NavLink>
                 </li>
                 <li className="nav-item">
