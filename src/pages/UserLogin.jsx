@@ -44,7 +44,7 @@ const UserLogin = () => {
       const response = await API.post("/token/", data);
       setToken(response.data.access);
       // Fetch user profile from the updated endpoint
-      const profileResponse = await API.get("/accounts/profile/");
+      const profileResponse = await API.get("/accounts/users/profile/");
       setUser(profileResponse.data);
       alert("Login successful!");
       navigate("/dashboard"); // Redirect to dashboard after login

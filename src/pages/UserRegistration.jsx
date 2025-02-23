@@ -31,7 +31,7 @@ const UserRegistration = () => {
 
   const onSubmit = async (data) => {
     try {
-      await API.post("/accounts/register/", data);
+      await API.post("/accounts/users/register/", data);
       alert("Registration successful!");
       navigate("/login");
     } catch (error) {
