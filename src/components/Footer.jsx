@@ -1,15 +1,14 @@
-// src/components/Footer.jsx
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import "../styles/Footer.css"; // Import custom Footer styles
+import "../styles/Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container text-center">
+      <div className="footer-container">
         <p className="footer-text">
           &copy; {new Date().getFullYear()} ShannyTechSolutions. All rights
-          reserved. This website is developed with ❤️ by ShannyTechSolutions.
+          reserved. Developed with ❤️ by ShannyTechSolutions.
         </p>
         <div className="footer-social">
           <a href="#" className="footer-link" aria-label="Facebook">
