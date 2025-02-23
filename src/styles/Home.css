@@ -1,4 +1,4 @@
-/* src/styles/Home.css */
+/* Base Styles */
 .home {
   width: 100%;
   height: 100vh;
@@ -65,4 +65,38 @@
 
 .hero-btn.secondary:hover {
   background: linear-gradient(135deg, #66bb6a, #2e7d32);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+  .hero-btn {
+    font-size: 1.1rem;
+    padding: 0.65rem 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 1rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .hero-btn-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero-btn {
+    width: 100%;
+    padding: 0.75rem;
+  }
 }
