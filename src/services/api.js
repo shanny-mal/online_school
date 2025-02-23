@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://shannytechsolutions-prod-1840c2ea8c47.herokuapp.com//api", // Update this URL based on your backend configuration
+  baseURL: "https://shannytechsolutions-prod-1840c2ea8c47.herokuapp.com/api", // Update this URL based on your backend configuration
 });
 
 // Request interceptor to add Authorization header if token exists
